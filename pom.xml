@@ -18,6 +18,7 @@
     <modules>
         <!--<module>demo-03-mq-01-kafka</module>-->
         <module>demo-03-mq-02-rabbitmq</module>
+        <module>demo-03-mq-02-rabbitmq/demo-03-mq-03-declare</module>
     </modules>
 
 

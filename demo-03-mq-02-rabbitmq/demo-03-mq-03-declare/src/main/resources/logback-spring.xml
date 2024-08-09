@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--</configuration>-->
+<configuration>
+    <property name="PATTERN_STDOUT"
+              value="%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} | %highlight(${LOG_LEVEL_PATTERN:-%5p} ${PID:- }) | %boldGreen(%-30.30logger: %-4L) | %m%n"/>
+
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出 -->
+            <pattern>${PATTERN_STDOUT}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <!-- 标准输出日志 -->
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,19 @@
+spring:
+  rabbitmq:
+    host: 192.168.8.43
+    port: 5672
+    username: admin
+    password: aiteer
+    # 只需要修改虚拟机就好了，为每个虚拟机配置对应的全量的队列与exchange
+#    virtual-host: "/suyh001CommonFlink"
+#    virtual-host: "/suyh002CommonFlink"
+    virtual-host: "/suyhTmp"
+
+
+
+
+
+
+
+
+

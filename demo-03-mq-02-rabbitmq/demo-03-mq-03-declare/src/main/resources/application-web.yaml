@@ -1,0 +1,14 @@
+spring:
+  main:
+    web-application-type: none
+
+
+#---
+#spring:
+#  config:
+#    activate:
+#      on-profile: prod
+#
+#  main:
+#    web-application-type: servlet
+

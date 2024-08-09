@@ -1,0 +1,23 @@
+suyh:
+  declare:
+    topic-exchange-list:
+      - exchange-name: "suyhCohortBatchExchange"
+        binding-list:
+          - queue-name: "suyhCohortBatch"
+            routing-key: "suyhCohortBatch"
+          - queue-name: "suyhCohortRetentionBatch"
+            routing-key: "suyhCohortRetentionBatch"
+      - exchange-name: "suyhCohortStreamExchange"
+        binding-list:
+          - queue-name: "suyhCohortRetentionStream"
+            routing-key: "suyhCohortRetentionStream"
+          - queue-name: "suyhCohortStream"
+            routing-key: "suyhCohortStream"
+          - queue-name: "suyhCohortStreamLogin"
+            routing-key: "suyhCohortStreamLogin"
+          - queue-name: "suyhCohortStreamRecharge"
+            routing-key: "suyhCohortStreamRecharge"
+          - queue-name: "suyhCohortStreamRegistry"
+            routing-key: "suyhCohortStreamRegistry"
+          - queue-name: "suyhCohortStreamWithdrawal"
+            routing-key: "suyhCohortStreamWithdrawal"

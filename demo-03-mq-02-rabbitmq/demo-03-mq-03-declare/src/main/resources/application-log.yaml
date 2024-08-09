@@ -1,0 +1,14 @@
+logging:
+  level:
+    root: info
+
+#logging:
+#  level:
+#    root: info
+#  file:
+#    name: /logs/data-replay/logs/data-replay.log
+#  logback:
+#    rollingpolicy:
+#      file-name-pattern: /logs/data-replay/logs/%d{yyyy-MM-dd_HH-mm}/data-replay.%02i.log
+
+

@@ -1,0 +1,12 @@
+
+
+spring:
+  config:
+    import:
+      - application-custom.yaml
+      - application-log.yaml
+      - application-rmq.yaml
+      - application-web.yaml
+
+
+
