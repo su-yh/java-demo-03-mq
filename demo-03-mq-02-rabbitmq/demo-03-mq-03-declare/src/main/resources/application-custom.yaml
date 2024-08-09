@@ -1,18 +1,23 @@
 suyh:
   declare:
     topic-exchange-list:
+      # 同期群批算
       - exchange-name: "suyhCohortBatchExchange"
         binding-list:
+          # sink
           - queue-name: "suyhCohortBatch"
             routing-key: "suyhCohortBatch"
           - queue-name: "suyhCohortRetentionBatch"
             routing-key: "suyhCohortRetentionBatch"
+      # 同期群流算
       - exchange-name: "suyhCohortStreamExchange"
         binding-list:
+          # sink
           - queue-name: "suyhCohortRetentionStream"
             routing-key: "suyhCohortRetentionStream"
           - queue-name: "suyhCohortStream"
             routing-key: "suyhCohortStream"
+          # 流模式-source
           - queue-name: "suyhCohortStreamLogin"
             routing-key: "suyhCohortStreamLogin"
           - queue-name: "suyhCohortStreamRecharge"
@@ -21,3 +26,48 @@ suyh:
             routing-key: "suyhCohortStreamRegistry"
           - queue-name: "suyhCohortStreamWithdrawal"
             routing-key: "suyhCohortStreamWithdrawal"
+      # 实时曲线批模式
+      - exchange-name: "suyhRealtimeBatchExchange"
+        binding-list:
+          # live 渠道统计-sink
+          - queue-name: "suyhLiveBatchAd"
+            routing-key: "suyhLiveBatchAd"
+          - queue-name: "suyhLiveBatchAdDetail"
+            routing-key: "suyhLiveBatchAdDetail"
+          - queue-name: "suyhLiveBatchChannel"
+            routing-key: "suyhLiveBatchChannel"
+          # 实时曲线-sink
+          - queue-name: "suyhRealtimeBatchSingle"
+            routing-key: "suyhRealtimeBatchSingle"
+      # 实时曲线流模式
+      - exchange-name: "suyhRealtimeStreamExchange"
+        binding-list:
+          # live 渠道统计-sink
+          - queue-name: "suyhLiveStreamAd"
+            routing-key: "suyhLiveStreamAd"
+          - queue-name: "suyhLiveStreamAdDetail"
+            routing-key: "suyhLiveStreamAdDetail"
+          - queue-name: "suyhLiveStreamChannel"
+            routing-key: "suyhLiveStreamChannel"
+          # 实时曲线-sink
+          - queue-name: "suyhRealtimeStreamSingle"
+            routing-key: "suyhRealtimeStreamSingle"
+          # 实时曲线-source
+          - queue-name: "suyhRealtimeUserLogin"
+            routing-key: "suyhRealtimeUserLogin"
+          - queue-name: "suyhRealtimeUserRecharge"
+            routing-key: "suyhRealtimeUserRecharge"
+          - queue-name: "suyhRealtimeUserRegistry"
+            routing-key: "suyhRealtimeUserRegistry"
+          - queue-name: "suyhRealtimeUserWithdrawal"
+            routing-key: "suyhRealtimeUserWithdrawal"
+      - exchange-name: "suyhRepetitionExchangeBatch"
+        binding-list:
+          - queue-name: "suyhRepetitionQueueSingle"
+            routing-key: "suyhRepetitionQueueSingle"
+
+
+
+
+
+
