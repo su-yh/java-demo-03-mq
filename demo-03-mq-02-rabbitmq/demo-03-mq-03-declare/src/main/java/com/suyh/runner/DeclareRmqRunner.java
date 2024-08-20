@@ -8,6 +8,7 @@ import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -24,6 +25,7 @@ import java.util.List;
 public class DeclareRmqRunner implements ApplicationRunner {
     private final CustomProperties properties;
     private final AmqpAdmin amqpAdmin;
+    private final ConnectionFactory connectionFactory;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -44,5 +46,8 @@ public class DeclareRmqRunner implements ApplicationRunner {
                 amqpAdmin.declareBinding(binding);
             }
         }
+
+        // 处理完成后，关闭连接。
+        connectionFactory.resetConnection();
     }
 }
