@@ -1,0 +1,27 @@
+spring:
+  rabbitmq:
+    host: 192.168.8.43
+    port: 5672
+    username: admin
+    password: aiteer
+    virtual-host: "/suyhTmp"
+
+
+base:
+  rabbitmq:
+    consumer:
+      host: 192.168.8.143
+      port: 5672
+      username: suyh
+      password: suyh
+      virtual-host: "/suyhCdapFlink"
+
+    product:
+      host: 192.168.8.143
+      port: 5672
+      username: cem
+      password: cem
+      virtual-host: "/cem/payment"
+
+
+

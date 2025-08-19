@@ -18,6 +18,8 @@
         <module>demo-03-mq-02-rabbitmq-01</module>
         <module>demo-03-mq-02-rabbitmq-02</module>
         <module>demo-03-mq-02-rabbitmq-03</module>
+        <module>demo-03-mq-03-declare</module>
+        <module>demo-03-mq-04-multi-01</module>
     </modules>
 
 </project>
